@@ -1,0 +1,67 @@
+/* =============================
+    table of contents
+    =============================
+        1. Left Section ==> Buttons
+        2. Right Section ==> Cards
+
+ */
+
+main.flex {
+  gap: 3rem;
+  align-items: start;
+}
+
+/* ==============
+    1. Left Section ==> Buttons
+  ==============*/
+main section.left-section {
+  flex-direction: column;
+  gap: 10px;
+}
+
+main section.left-section.flex button {
+  background-color: rgba(36, 37, 46, 1);
+  width: 11rem;
+  padding: 0.75rem 0;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 1.05rem;
+  opacity: 0.5;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+main section.left-section.flex button:hover {
+  opacity: 1;
+}
+
+main section.left-section.flex button.active {
+  opacity: 1;
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  padding: 0.8rem 0;
+  border: 1px solid var(--blue);
+}
+
+/* ==============
+    2. Right Section ==> Cards
+  ==============*/
+main section.right-section {
+  /* flex-grow: 1; */
+}
+
+.card .box {
+  padding: 1rem 0.4rem;
+}
+
+.card .box .title {
+  color: var(--title);
+}
+
+.card .box .sub-title {
+  color: var(--subtitle);
+  font-size: 0.8rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.8rem;
+}
+/* 3:16:00 */
