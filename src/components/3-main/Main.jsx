@@ -1,21 +1,79 @@
 import "./main.css";
+import { useState } from "react";
+const myProjects = [
+  {
+    projectTitle: "react project",
+    category: "react",
+    imgPath: "./project1.png",
+  },
+  {
+    projectTitle: "css project",
+    category: "css",
+    imgPath: "./project1.png",
+  },
+  {
+    projectTitle: "bootstap & react project",
+    category: ["react", "bootstrap"],
+    imgPath: "./project1.png",
+  },
+];
+// 5:02:14
 const Main = () => {
+  const [isActive, setIsActive] = useState("all");
+  const [arr, setArr] = useState(myProjects);
   return (
     <main className="flex">
       <section className="left-section flex">
-        <button className="active">all projects</button>
-        <button>html & css</button>
-        <button>JavaScript</button>
-        <button>React & Mui</button>
-        <button>Node & express</button>
+        <button
+          onClick={() => {
+            setIsActive("all");
+            const newArr = myProjects.filter((itm) => {
+              return itm.category === isActive.toString();
+            });
+            setArr(newArr);
+          }}
+          className={isActive === "all" ? "active" : null}
+        >
+          All Projects
+        </button>
+        <button
+          onClick={() => {
+            setIsActive("css");
+            const newArr = myProjects.filter((itm) => {
+              return itm.category === "css";
+            });
+            setArr(newArr);
+          }}
+          className={isActive === "css" ? "active" : null}
+        >
+          html & css
+        </button>
+        <button
+          onClick={() => setIsActive("js")}
+          className={isActive === "js" ? "active" : null}
+        >
+          JavaScript
+        </button>
+        <button
+          onClick={() => {
+            setIsActive("react");
+            const newArr = myProjects.filter((itm) => {
+              return itm.category === "react";
+            });
+            setArr(newArr);
+          }}
+          className={isActive === "react" ? "active" : null}
+        >
+          React & Mui
+        </button>
       </section>
       <section className="flex right-section">
-        {["aa", "bb", "cc", 1, 2].map((item) => {
+        {arr.map((item) => {
           return (
-            <article className="card" key={item}>
-              <img src="./project1.png" alt="" width={266} />
+            <article className="card" key={item.imgPath}>
+              <img src={item.imgPath} alt="" width={266} />
               <div style={{ width: "266px" }} className="box">
-                <h1 className="title">Landing Page 2</h1>
+                <h1 className="title">{item.projectTitle}</h1>
                 <p className="sub-title">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
                   eveniet commodi nulla cum. Aliquid saepe, iusto beatae

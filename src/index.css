@@ -3,6 +3,7 @@ html {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.1px;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -146,5 +147,10 @@ html {
   .divider {
     width: calc(100% + var(--container-padding) + var(--container-padding));
     margin-left: calc(var(--container-padding) * -1);
+  }
+  .scroll2top {
+    opacity: 0.6;
+    width: 2.2rem;
+    height: 2.2rem;
   }
 }
