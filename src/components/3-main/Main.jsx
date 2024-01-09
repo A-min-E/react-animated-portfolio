@@ -3,34 +3,46 @@ import { useState } from "react";
 const myProjects = [
   {
     projectTitle: "react project",
-    category: "react",
+    category: ["react"],
     imgPath: "./project1.png",
   },
   {
+    projectTitle: "javascript project",
+    category: ["js"],
+    imgPath: "./project2.png",
+  },
+  {
     projectTitle: "css project",
-    category: "css",
+    category: ["css"],
     imgPath: "./project1.png",
   },
   {
     projectTitle: "bootstap & react project",
-    category: ["react", "bootstrap"],
-    imgPath: "./project1.png",
+    category: ["bootstrap", "react"],
+    imgPath: "./project2.png",
   },
 ];
-// 5:02:14
+// 5:25:14
 const Main = () => {
   const [isActive, setIsActive] = useState("all");
   const [arr, setArr] = useState(myProjects);
+  const handleClick = (buttonCategory) => {
+    setIsActive(buttonCategory);
+    const newArr = myProjects.filter((itm) => {
+      const cat = itm.category.find((it) => {
+        return it === buttonCategory;
+      });
+      return cat === buttonCategory;
+    });
+    setArr(newArr);
+  };
   return (
     <main className="flex">
       <section className="left-section flex">
         <button
           onClick={() => {
             setIsActive("all");
-            const newArr = myProjects.filter((itm) => {
-              return itm.category === isActive.toString();
-            });
-            setArr(newArr);
+            setArr(myProjects);
           }}
           className={isActive === "all" ? "active" : null}
         >
@@ -38,29 +50,23 @@ const Main = () => {
         </button>
         <button
           onClick={() => {
-            setIsActive("css");
-            const newArr = myProjects.filter((itm) => {
-              return itm.category === "css";
-            });
-            setArr(newArr);
+            handleClick("css");
           }}
           className={isActive === "css" ? "active" : null}
         >
           html & css
         </button>
         <button
-          onClick={() => setIsActive("js")}
+          onClick={() => {
+            handleClick("js");
+          }}
           className={isActive === "js" ? "active" : null}
         >
           JavaScript
         </button>
         <button
           onClick={() => {
-            setIsActive("react");
-            const newArr = myProjects.filter((itm) => {
-              return itm.category === "react";
-            });
-            setArr(newArr);
+            handleClick("react");
           }}
           className={isActive === "react" ? "active" : null}
         >
