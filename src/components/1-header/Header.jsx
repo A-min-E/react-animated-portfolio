@@ -1,8 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./header.css";
 
-const header = () => {
+const Header = () => {
   const [showModal, setShowModal] = useState(false);
+  const [theme, setTheme] = useState(
+    localStorage.getItem("currentMode") ?? "dark"
+  );
+  useEffect(() => {
+    if (theme === "light") {
+      document.body.classList.remove("dark");
+      document.body.classList.add("light");
+    } else {
+      document.body.classList.remove("light");
+      document.body.classList.add("dark");
+    }
+  }, [theme]);
   return (
     <header className="flex">
       <button
@@ -32,8 +44,23 @@ const header = () => {
           </li>
         </ul>
       </nav>
-      <button className="mode flex">
-        <span className="icon-moon-o" />
+      <button
+        onClick={() => {
+          //send value to local storage$
+          localStorage.setItem(
+            "currentMode",
+            theme === "dark" ? "light" : "dark"
+          );
+          //set the theme from the local storage
+          setTheme(localStorage.getItem("currentMode"));
+        }}
+        className="mode flex"
+      >
+        {theme === "dark" ? (
+          <span className="icon-moon-o" />
+        ) : (
+          <span className="icon-sun" />
+        )}
       </button>
 
       {showModal && (
@@ -69,4 +96,4 @@ const header = () => {
   );
 };
 
-export default header;
+export default Header;
