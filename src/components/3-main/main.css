@@ -68,7 +68,7 @@ main section.right-section.flex {
 
 .card:hover {
   border: 1px solid var(--blue);
-  background-color: rgba(246, 246, 246);
+
   rotate: 1deg;
   scale: 1.01;
   cursor: pointer;
@@ -77,6 +77,9 @@ main section.right-section.flex {
 .light .card,
 .light .card:hover {
   border: none;
+}
+.light .card:hover {
+  background-color: rgba(246, 246, 246);
 }
 
 .card img {
