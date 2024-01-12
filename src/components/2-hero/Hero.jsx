@@ -3,6 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
 import developerAnimation from "../../animation/developer.json";
 import { motion } from "framer-motion";
+import CV from "../../Mohamed_Amine_WISSAR_CV.pdf";
 const Hero = () => {
   return (
     <section className="hero flex">
@@ -25,8 +26,13 @@ const Hero = () => {
           transition={{ duration: 3 }}
           className="title"
         >
-          Fullstack-Developer
+          Fullstack-Developer &nbsp;
+          <a href={CV} download>
+            {/* <img src="./resume-.svg" alt="" height="50" /> */}
+            (My CV)
+          </a>
         </motion.h1>
+
         <p className="sub-title">
           I'm a Web Developer with a vast experience in the field, I have worked
           in different field with companies and small businesses, that allowed
