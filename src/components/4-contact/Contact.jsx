@@ -2,7 +2,8 @@ import React from "react";
 import "./contact.css";
 import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
-import doneAnimation from "../../../public/animation/Animation.json";
+import doneAnimation from "../../animation/done.json";
+import EnvlopAnimation from "../../animation/envlop.json";
 const Contact = () => {
   const [state, handleSubmit] = useForm("meqyoqga");
   return (
@@ -15,7 +16,7 @@ const Contact = () => {
         Contact us for more information and Get notified when I publish
         something new
       </p>
-      <div className="flex">
+      <div className="flex" style={{ justifyContent: "space-between" }}>
         <form action="" className="" onSubmit={handleSubmit}>
           <div className="flex">
             <label htmlFor="">Email Adresse : </label>
@@ -46,7 +47,7 @@ const Contact = () => {
           </button>
           {state.succeeded && (
             <p
-              className="flex"
+              className="flex messageSent"
               style={{
                 justifyContent: "center",
                 fontSize: "18px",
@@ -63,7 +64,13 @@ const Contact = () => {
             </p>
           )}
         </form>
-        <div className="animation">anim</div>
+        <div className="animation">
+          <Lottie
+            className="envlop-animation"
+            animationData={EnvlopAnimation}
+            style={{ height: 355 }}
+          />
+        </div>
       </div>
     </section>
   );

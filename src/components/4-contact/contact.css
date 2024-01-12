@@ -83,6 +83,18 @@ section.contact-us .submit:hover {
   scale: 0.97;
 }
 
+.light section.contact-us .messageSent {
+  color: #333;
+}
+.dark section.contact-us .messageSent {
+  color: #fff;
+}
+
+@media (max-width: 1200px) {
+  section.contact-us .envlop-animation {
+    display: none;
+  }
+}
 @media (max-width: 600px) {
   .animation {
     display: none;
