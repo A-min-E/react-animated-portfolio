@@ -51,7 +51,7 @@ section.hero h1.title {
 
 section.hero h1.title a {
   font-size: 1.05rem;
-  background-color: rgba(255, 0, 0, 0.5);
+  background-color: #5dbcfc;
   border-radius: 20%;
   color: black;
 }

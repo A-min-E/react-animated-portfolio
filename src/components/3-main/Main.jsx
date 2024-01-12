@@ -79,7 +79,12 @@ const Main = () => {
                       <div className="icon-link"></div>
                       <div className="icon-github"></div>
                     </div>
-                    <a href="" className="link flex">
+                    <a
+                      href={item.webSite}
+                      className="link flex"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       more{" "}
                       <span
                         style={{ alignSelf: "end" }}
