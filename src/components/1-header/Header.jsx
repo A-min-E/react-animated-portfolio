@@ -28,19 +28,19 @@ const Header = () => {
       <nav>
         <ul className="flex">
           <li>
-            <a href="">About</a>
+            <a href="#hero">About</a>
           </li>
-          <li>
+          {/* <li>
             <a href="">Articles</a>
-          </li>
+          </li> */}
           <li>
-            <a href="">Projects</a>
+            <a href="#main">Projects</a>
           </li>
-          <li>
+          {/* <li>
             <a href="">Speaking</a>
-          </li>
+          </li> */}
           <li>
-            <a href="">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -75,19 +75,40 @@ const Header = () => {
               />
             </li>
             <li>
-              <a href="">About</a>
+              <a
+                href="#hero"
+                onClick={() => {
+                  setShowModal(false);
+                }}
+              >
+                About
+              </a>
             </li>
-            <li>
+            {/* <li>
               <a href="">Articles</a>
-            </li>
+            </li> */}
             <li>
-              <a href="">Projects</a>
+              <a
+                href="#main"
+                onClick={() => {
+                  setShowModal(false);
+                }}
+              >
+                Projects
+              </a>
             </li>
-            <li>
+            {/* <li>
               <a href="">Speaking</a>
-            </li>
+            </li> */}
             <li>
-              <a href="">Contact</a>
+              <a
+                href="#contact"
+                onClick={() => {
+                  setShowModal(false);
+                }}
+              >
+                Contact
+              </a>
             </li>
           </ul>
         </div>

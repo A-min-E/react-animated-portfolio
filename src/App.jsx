@@ -20,11 +20,11 @@ function App() {
   return (
     <div id="up" className="container ">
       <Header />
-      <div className="divider" />
+      <div className="divider" id="hero" />
       <Hero />
-      <div className="divider" />
+      <div className="divider" id="main" />
       <Main />
-      <div className="divider" />
+      <div className="divider" id="contact" />
       <Contact />
       <div className="divider" />
       <Footer />

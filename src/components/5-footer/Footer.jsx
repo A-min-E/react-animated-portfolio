@@ -5,16 +5,16 @@ const Footer = () => {
     <footer className="flex">
       <ul className="flex">
         <li>
-          <a href="">About</a>
+          <a href="#hero">About</a>
         </li>
         <li>
-          <a href="">Projects</a>
+          <a href="#main">Projects</a>
         </li>
-        <li>
+        {/* <li>
           <a href="">Speaking</a>
-        </li>
+        </li> */}
         <li>
-          <a href="">Users</a>
+          <a href="#contac">Contact</a>
         </li>
       </ul>
       <p>{new Date().getFullYear()} Mohamed Amine WISSAR. All right reserved</p>

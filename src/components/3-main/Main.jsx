@@ -29,21 +29,14 @@ const Main = () => {
         >
           All Projects
         </button>
-        <button
-          onClick={() => {
-            handleClick("css");
-          }}
-          className={isActive === "css" ? "active" : null}
-        >
-          html & css
-        </button>
+
         <button
           onClick={() => {
             handleClick("js");
           }}
           className={isActive === "js" ? "active" : null}
         >
-          JavaScript
+          html & css & js
         </button>
         <button
           onClick={() => {
