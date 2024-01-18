@@ -41,7 +41,12 @@ const Hero = () => {
         <div className="all-icons flex">
           <div className="icon icon-twitter"></div>
           <div className="icon icon-instagram"></div>
-          <div className="icon icon-github"></div>
+          <a
+            className="icon icon-github"
+            href="https://github.com/A-min-E/"
+            target="_blank"
+            rel="noreferrer"
+          ></a>
           <div className="icon icon-linkedin"></div>
         </div>
       </div>

@@ -70,7 +70,12 @@ const Main = () => {
                   <div className="flex icons">
                     <div className="flex" style={{ gap: "11px" }}>
                       <div className="icon-link"></div>
-                      <div className="icon-github"></div>
+                      <a
+                        className="icon-github"
+                        href="https://github.com/A-min-E/"
+                        target="_blank"
+                        rel="noreferrer"
+                      ></a>
                     </div>
                     <a
                       href={item.webSite}
