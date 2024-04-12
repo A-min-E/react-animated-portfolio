@@ -3,7 +3,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import Lottie from "lottie-react";
 import developerAnimation from "../../animation/developer.json";
 import { motion } from "framer-motion";
-import CV from "../../Mohamed_Amine_WISSAR_CV.pdf";
+
 const Hero = () => {
   return (
     <section className="hero flex">
@@ -27,10 +27,6 @@ const Hero = () => {
           className="title"
         >
           Fullstack-Developer &nbsp;
-          <a href={CV} download>
-            {/* <img src="./resume-.svg" alt="" height="50" /> */}
-            (My CV)
-          </a>
         </motion.h1>
 
         <p className="sub-title">
